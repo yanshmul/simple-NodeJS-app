@@ -4,7 +4,7 @@ const port = process.env.port || 3000;
 
 const handler = (req,res) => {
     console.log("Server received request. ");
-    res.end('Hello Azure from GitHub !!!');
+    res.end(process.env.CONNECTION_STRING);
 }
 
 const server = http.createServer(handler);
