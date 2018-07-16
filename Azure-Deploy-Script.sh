@@ -36,5 +36,5 @@ git remote add azure "https://$USERNAME@$SITENAME.scm.azurewebsites.net/$SITENAM
 # push master to deploy the site
 # git push azure master
 
-# browse to the site
+# browse to the site  
 # az webapp browse --name $SITENAME --resource-group $RESOURCEGROUP
