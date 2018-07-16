@@ -1,10 +1,17 @@
 const http = require("http");
-const port = process.env.port || 3000;
-
+const figlet = require("figlet");
+const port = process.env.port || 3000; 
 
 const handler = (req,res) => {
     console.log("Server received request. ");
-    res.end(process.env.CONNECTION_STRING);
+    figlet('Hello World !?!', (err,data) => {
+        if(err) {
+            console.log('Something went wrong ...');
+            console.log(err);
+            return;
+        }
+        res.end(data);
+    });
 }
 
 const server = http.createServer(handler);
