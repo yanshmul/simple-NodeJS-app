@@ -3,7 +3,7 @@ const port = process.env.port || 3000;
 
 const handler = (req,res) => {
     console.log("Server received request. ");
-    res.end(process.env.CONNECTION_STRING);
+    res.end("Checked Out.");
 }
 
 const server = http.createServer(handler);
